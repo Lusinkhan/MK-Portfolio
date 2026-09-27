@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Momina Khan — Graphic Designer</title>
+<meta name="description" content="Momina Khan — Graphic Designer creating bold identities, packaging, campaigns and social experiences.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+:root{--bg:#080808;--fg:#f4f1eb;--muted:#96938c;--line:#242424;--acid:#d8ff38;--card:#111;--max:1380px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--fg);font-family:Manrope,Arial,sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}button{font:inherit}
+.noise{position:fixed;inset:-50%;z-index:50;pointer-events:none;opacity:.055;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");transform:rotate(.001deg)}
+.cursor,.cursor2{position:fixed;left:0;top:0;pointer-events:none;z-index:1000;border-radius:50%;mix-blend-mode:difference}.cursor{width:9px;height:9px;background:white}.cursor2{width:44px;height:44px;border:1px solid white;transition:width .25s,height .25s}
+nav{height:82px;display:flex;align-items:center;justify-content:space-between;max-width:var(--max);margin:auto;padding:0 28px;position:relative;z-index:20}
+.logo{font-weight:800;letter-spacing:-.04em}.logo span{color:var(--acid)}
+.navlinks{display:flex;gap:30px;font-size:12px;text-transform:uppercase;letter-spacing:.14em}.navlinks a{opacity:.65}.navlinks a:hover{opacity:1;color:var(--acid)}
+.hero{min-height:calc(100vh - 82px);max-width:var(--max);margin:auto;padding:60px 28px 90px;display:grid;grid-template-columns:1.35fr .65fr;align-items:center;position:relative}
+.kicker{font:12px "DM Mono";color:var(--acid);letter-spacing:.18em;text-transform:uppercase;margin-bottom:28px}
+h1{font-size:clamp(70px,10.2vw,158px);line-height:.82;letter-spacing:-.075em;margin:0;max-width:1050px}
+h1 em{font-family:"Playfair Display";font-weight:700;font-size:.78em;letter-spacing:-.06em}
+.hero-copy{max-width:390px;margin-left:auto;color:var(--muted);line-height:1.7;font-size:15px}
+.hero-copy strong{color:var(--fg);font-weight:600}.scroll{margin-top:55px;font:11px "DM Mono";letter-spacing:.15em;color:var(--muted)}
+.orbit{position:absolute;right:4%;top:12%;width:270px;height:270px;border:1px solid #292929;border-radius:50%;transform-style:preserve-3d;animation:spin 18s linear infinite}
+.orbit:before,.orbit:after{content:"";position:absolute;inset:34px;border:1px solid #292929;border-radius:50%;transform:rotateX(65deg)}
+.orbit:after{inset:-12px;border-color:#3d3d3d;transform:rotateY(65deg)}
+.sphere{position:absolute;width:85px;height:85px;left:92px;top:92px;border-radius:50%;background:radial-gradient(circle at 30% 25%,#fff 0 4%,#b4d32b 12%,#202a08 48%,#050505 72%);box-shadow:0 0 80px #b8df3a55;animation:float 4s ease-in-out infinite}
+@keyframes spin{to{transform:rotateZ(360deg) rotateX(360deg)}}@keyframes float{50%{transform:translateY(-14px) scale(1.05)}}
+.marquee{border-block:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:18px 0;color:#777;font:11px "DM Mono";letter-spacing:.22em}.marquee div{display:inline-block;animation:marquee 25s linear infinite}.marquee b{color:var(--acid);margin:0 30px}@keyframes marquee{to{transform:translateX(-50%)}}
+section{max-width:var(--max);margin:auto;padding:130px 28px}.sectionhead{display:flex;justify-content:space-between;align-items:end;margin-bottom:50px}.eyebrow{font:11px "DM Mono";letter-spacing:.15em;color:var(--acid)}h2{font-size:clamp(45px,7vw,92px);letter-spacing:-.065em;line-height:.9;margin:8px 0 0}.sectiondesc{max-width:330px;color:var(--muted);font-size:14px;line-height:1.7}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}.card{position:relative;overflow:hidden;background:#111;min-height:540px;border:1px solid #202020;transform-style:preserve-3d}.card:nth-child(1){grid-column:span 7}.card:nth-child(2){grid-column:span 5}.card:nth-child(3){grid-column:span 5}.card:nth-child(4){grid-column:span 7}.card:nth-child(5),.card:nth-child(6),.card:nth-child(7),.card:nth-child(8){grid-column:span 3;min-height:430px}
+.card img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(.15);opacity:.78;transition:transform .8s cubic-bezier(.2,.7,.2,1),filter .5s,opacity .5s}.card:hover img{transform:scale(1.07);filter:grayscale(0);opacity:1}
+.card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,#000d 100%);pointer-events:none}
+.cardinfo{position:absolute;left:24px;right:24px;bottom:22px;z-index:2;display:flex;justify-content:space-between;align-items:end;gap:15px}.num{font:11px "DM Mono";color:var(--acid)}.ctitle{font-size:30px;letter-spacing:-.05em;font-weight:700;margin-top:5px}.ctype{font:10px "DM Mono";color:#bbb;text-transform:uppercase;letter-spacing:.12em;text-align:right}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}.aboutbig{font-size:clamp(32px,4.3vw,64px);line-height:1.02;letter-spacing:-.055em}.aboutbig i{font-family:"Playfair Display";font-weight:700}.abouttext{color:var(--muted);line-height:1.8;max-width:500px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);margin-top:45px}.stat{background:var(--bg);padding:24px}.stat b{font-size:34px;letter-spacing:-.05em}.stat span{display:block;color:var(--muted);font:10px "DM Mono";margin-top:8px;text-transform:uppercase}
+.contact{min-height:75vh;display:flex;flex-direction:column;justify-content:center}.contact h2{max-width:950px}.contact h2 a{border-bottom:2px solid var(--acid);transition:color .3s}.contact h2 a:hover{color:var(--acid)}.contactrow{display:flex;justify-content:space-between;margin-top:70px;color:var(--muted);font:11px "DM Mono";letter-spacing:.12em}.pill{border:1px solid #333;border-radius:999px;padding:12px 18px;color:var(--fg)}
+footer{border-top:1px solid var(--line);max-width:var(--max);margin:auto;padding:28px;font:10px "DM Mono";color:#666;display:flex;justify-content:space-between}
+.reveal{opacity:0;transform:translateY(45px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.8,.2,1)}.reveal.in{opacity:1;transform:none}
+#loader{position:fixed;inset:0;background:#080808;z-index:2000;display:grid;place-items:center;transition:opacity .8s,visibility .8s}.loaderin{width:260px}.loadtop{display:flex;justify-content:space-between;font:10px "DM Mono";color:#777;margin-bottom:12px}.bar{height:1px;background:#333;overflow:hidden}.bar i{display:block;height:100%;width:0;background:var(--acid);transition:width 1.1s}
+@media(max-width:800px){.cursor,.cursor2{display:none}.navlinks{gap:12px}.navlinks a:nth-child(3){display:none}.hero{grid-template-columns:1fr;padding-top:80px}.hero-copy{margin:70px 0 0}.orbit{width:170px;height:170px;right:-20px;top:8%}.sphere{width:55px;height:55px;left:57px;top:57px}.orbit:before{inset:22px}.grid{display:grid;grid-template-columns:1fr}.card,.card:nth-child(n){grid-column:auto;min-height:480px}.about{grid-template-columns:1fr;gap:35px}.sectionhead{display:block}.sectiondesc{margin-top:25px}.contactrow{display:block}.contactrow>*{display:inline-block;margin:8px 10px 0 0}section{padding:95px 20px}.hero,nav{padding-left:20px;padding-right:20px}h1{font-size:19vw}}
+</style>
+</head>
+<body>
+<div id="loader"><div class="loaderin"><div class="loadtop"><span>MOMINA KHAN</span><span id="pct">00%</span></div><div class="bar"><i id="bar"></i></div></div></div>
+<div class="noise"></div><div class="cursor"></div><div class="cursor2"></div>
+<nav><a class="logo" href="#">M<span>.</span>K</a><div class="navlinks"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></div></nav>
+<main>
+<section class="hero">
+  <div class="hero-title reveal"><div class="kicker">Graphic Designer / Visual Storyteller</div><h1>Ideas<br>with <em>shape.</em></h1></div>
+  <div class="hero-copy reveal"><strong>I’m Momina Khan.</strong><br>Graphic designer creating packaging, branding, product visuals and social experiences that make brands feel considered, memorable and alive.<div class="scroll">↓ SCROLL TO EXPLORE</div></div>
+  <div class="orbit"><div class="sphere"></div></div>
+</section>
+<div class="marquee"><div>BRANDING <b>✦</b> PACKAGING <b>✦</b> SOCIAL DESIGN <b>✦</b> ART DIRECTION <b>✦</b> AI-ASSISTED CREATIVE <b>✦</b> VISUAL STORYTELLING <b>✦</b> BRANDING <b>✦</b> PACKAGING <b>✦</b> SOCIAL DESIGN <b>✦</b></div></div>
+
+<section id="work">
+  <div class="sectionhead reveal"><div><div class="eyebrow">01 / SELECTED WORK</div><h2>Things I’ve<br><em>made.</em></h2></div><p class="sectiondesc">A selection of packaging, retail, branding and social design projects from the portfolio.</p></div>
+  <div class="grid" id="projectGrid"></div>
+</section>
+
+<section id="about">
+  <div class="sectionhead reveal"><div><div class="eyebrow">02 / THE DESIGNER</div><h2>Make it<br><em>matter.</em></h2></div></div>
+  <div class="about">
+    <div class="aboutbig reveal">Good design isn’t decoration. It is <i>clarity</i> with personality.</div>
+    <div class="abouttext reveal">My work spans physical packaging, product branding, retail environments and digital social creatives. I enjoy taking a simple brief and building a visual language around it—one that feels premium, intentional and easy to remember.<div class="stats"><div class="stat"><b>08</b><span>Portfolio works</span></div><div class="stat"><b>04+</b><span>Design directions</span></div><div class="stat"><b>∞</b><span>Curiosity</span></div></div></div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="eyebrow reveal">03 / LET’S CREATE</div>
+  <h2 class="reveal">Have a brief?<br><a href="mailto:hello@example.com">Let’s talk.</a></h2>
+  <div class="contactrow reveal"><span>AVAILABLE FOR SELECT PROJECTS</span><span class="pill">MOMINA KHAN © 2026</span></div>
+</section>
+</main>
+<footer><span>Graphic Design / Branding / Packaging / Social</span><span>Built with intention.</span></footer>
+
+<script>
+const projects = [{"num": "01", "title": "Polycab", "type": "Bottle Branding / Retail", "desc": "A clean premium paper-bag and bottle branding direction for Polycab India Limited, using a minimal white base and bold red identity.", "image": "assets/portfolio-page-2.jpg"}, {"num": "02", "title": "Glenmark", "type": "Product Packaging & Supply", "desc": "Product packaging created for a Glenmark client, with production and final packaged-product supply managed through the project.", "image": "assets/portfolio-page-5.jpg"}, {"num": "03", "title": "Cots & Cuddles", "type": "Toy Packaging", "desc": "A playful kids' packaging concept designed for children aged 3+, focused on an engaging and visually appealing box experience.", "image": "assets/portfolio-page-3.jpg"}, {"num": "04", "title": "Gift Tech Mumbai", "type": "Retail / Brand Promotion", "desc": "A bright white-and-wood retail environment with clean signage, warm lighting and a minimal luxury direction.", "image": "assets/portfolio-page-6.jpg"}, {"num": "05", "title": "Acne Care", "type": "Packaging Design", "desc": "Tube and box packaging designed as a brand-building visual system, balancing shelf appeal, experience and functional communication.", "image": "assets/portfolio-page-7.jpg"}, {"num": "06", "title": "Nutlers", "type": "AI-Assisted Social Creative", "desc": "Premium promotional visuals combining AI tools and graphic design for product styling, creative storytelling and ad-ready social content.", "image": "assets/portfolio-page-8.jpg"}, {"num": "07", "title": "Dhanak Pay", "type": "Social / Brand Creative", "desc": "A promotional visual direction developed as part of the social-media-focused portfolio work.", "image": "assets/portfolio-page-9.jpg"}, {"num": "08", "title": "Social Design", "type": "Campaign Visuals", "desc": "Functional social-media design styled around the communication needs of the brand, built for awareness and visual impact.", "image": "assets/portfolio-page-10.jpg"}];
+const grid=document.getElementById('projectGrid');
+projects.forEach((p,i)=>{
+  const c=document.createElement('article'); c.className='card reveal';
+  c.innerHTML=`<img src="${p.image}" alt="${p.title} — ${p.type}" loading="${i<4?'eager':'lazy'}"><div class="cardinfo"><div><div class="num">${p.num}</div><div class="ctitle">${p.title}</div></div><div class="ctype">${p.type}</div></div>`;
+  grid.appendChild(c);
+});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(x=>io.observe(x));
+let x=0,y=0,tx=0,ty=0;
+const cur=document.querySelector('.cursor'),cur2=document.querySelector('.cursor2');
+addEventListener('pointermove',e=>{tx=e.clientX;ty=e.clientY});
+(function loop(){x+=(tx-x)*.35;y+=(ty-y)*.35;cur.style.transform=`translate(${tx-4}px,${ty-4}px)`;cur2.style.transform=`translate(${x-22}px,${y-22}px)`;requestAnimationFrame(loop)})();
+document.querySelectorAll('a,.card').forEach(el=>{el.addEventListener('mouseenter',()=>{cur2.style.width='70px';cur2.style.height='70px'});el.addEventListener('mouseleave',()=>{cur2.style.width='44px';cur2.style.height='44px'})});
+document.querySelectorAll('.card').forEach(card=>card.addEventListener('pointermove',e=>{const r=card.getBoundingClientRect();const rx=(e.clientY-r.top-r.height/2)/18, ry=-(e.clientX-r.left-r.width/2)/18;card.style.transform=`perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg) scale(1.01)`}));
+document.querySelectorAll('.card').forEach(card=>card.addEventListener('pointerleave',()=>card.style.transform=''));
+let n=0; const bar=document.getElementById('bar'),pct=document.getElementById('pct');
+const load=setInterval(()=>{n+=Math.floor(Math.random()*16)+7;if(n>=100){n=100;clearInterval(load);setTimeout(()=>{document.getElementById('loader').style.opacity=0;document.getElementById('loader').style.visibility='hidden'},300)}bar.style.width=n+'%';pct.textContent=String(n).padStart(2,'0')+'%'},90);
+</script>
+</body></html>
